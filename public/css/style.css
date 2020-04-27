@@ -33,14 +33,14 @@ section-title {
   margin-bottom: 70px;
 }
 
-h2 {
+section-title h2 {
   font-size: 32px;
   color: var(--text-dark);
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-.section-hr {
+section-title hr {
   width: 150px;
   border-top: 6px solid;
   border-color: var(--text-dark)
@@ -92,10 +92,10 @@ btn-wrapper {
 join-btn {
   background: white;
   text-align: center;
+  font-size: 20px;
   font-weight: 600;
   padding: 10px 20px;
   color: var(--text-dark);
-  width: 80px;
   margin-top: 20px;
 }
 
@@ -133,12 +133,12 @@ data-wrapper {
   justify-content: space-around;
 }
 
-.data d-block {
+.data div {
   display: flex;
   flex-direction: column;
 }
 
-.data d-value {
+.data value {
   font-size: 48px;
   font-weight: 900;
   background: -webkit-linear-gradient(#298698, #003E53);
@@ -147,7 +147,7 @@ data-wrapper {
   text-align: center;
 }
 
-d-name {
+.data name {
   font-size: 22px;
   font-weight: 500;
   color: var(--text-grey);
@@ -159,7 +159,7 @@ d-name {
   height: 600px;
 }
 
-w-block {
+.why div {
   width: 320px;
   margin: 0 50px 0 50px;
   text-align: center;
@@ -179,9 +179,33 @@ w-block {
 }
 
 
-.mobile {
+.phone {
   height: 930px;
   background: var(--gradient)
+}
+
+.phone img {
+  height: 550px;
+  margin: 0 80px;
+}
+
+.phone h4 {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.phone p {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  margin-top: 0;
+  line-height: 100%;
+}
+
+left-functions {
+  text-align: right;
 }
 
 
@@ -213,7 +237,6 @@ node-btn {
   font-size: 22px;
   font-weight: 600;
   padding: 10px 20px;
-  width: 120px;
   margin-top: 10px;
 }
 

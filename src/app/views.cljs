@@ -4,7 +4,7 @@
   [:section-title
    [:div
     [:h2 {:class inverse} text]
-    [:hr {:class [inverse "section-hr"]}]]])
+    [:hr {:class [inverse]}]]])
 
 (defn hero []
   [:div.hero
@@ -28,36 +28,59 @@
 (defn data []
   [:div.data
    [:data-wrapper
-    [:d-block
-     [:d-value "$1.54M"]
-     [:d-name "shielded"]]
-    [:d-block
-     [:d-value "1257"]
-     [:d-name "validators"]]
-    [:d-block
-     [:d-value "40"]
-     [:d-name "dev members"]]
-    [:d-block
-     [:d-value "1.4M"]
-     [:d-name "lines of code"]]]])
+    [:div
+     [:value "$1.54M"]
+     [:name "shielded"]]
+    [:div
+     [:value "1257"]
+     [:name "validators"]]
+    [:div
+     [:value "40"]
+     [:name "dev members"]]
+    [:div
+     [:value "1.4M"]
+     [:name "lines of code"]]]])
 
 (defn why []
   [:div.why
    [section-title "WHY CHOOSE INCOGNITO?"]
    [:flex-wrapper
-    [:w-block
+    [:div
      [:img {:src "/images/block.svg"}]
      [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 Transaction/sec)"]]]
-    [:w-block
+    [:div
      [:img {:src "/images/block.svg"}]
      [:p "One PRV " [:span "($0.4) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]
-    [:w-block
+    [:div
      [:img {:src "/images/block.svg"}]
      [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]])
 
-(defn mobile []
-  [:div.mobile
-   [section-title "INCOGNITO WALLET" "inverse"]])
+(defn phone []
+  [:div.phone
+   [section-title "INCOGNITO WALLET" "inverse"]
+   [:flex-wrapper
+    [:left-functions
+     [:div
+      [:h4 "Buy PRV"]
+      [:p "PRV is the fuel of" [:br] "Incognito’s blockchain."]]
+     [:div
+      [:h4 "Shield Crypt"]
+      [:p "Put your money " [:br] "safe anonimously. "]]
+     [:div
+      [:h4 "Use the Wallet"]
+      [:p "Send and receive " [:br] "shielded crypto."]]]
+    [:iphone
+     [:img {:src "/images/phone.svg"}]]
+    [:right-functions
+     [:div
+      [:h4 "Trade"]
+      [:p "Access to 70+ cryptos in" [:br] "decentralized exchange."]]
+     [:div
+      [:h4 "Stake Nodes"]
+      [:p "Be a part of the network" [:br] " and earn PRV passively."]]
+     [:div
+      [:h4 "Join the Forum"]
+      [:p "Help the movement with" [:br] "your ideas and work."]]]]])
 
 (defn node []
   [:div.node
@@ -100,13 +123,13 @@
   [:div.ecosystem
    [section-title "OUR ECOSYSTEM"]
    [:flex-wrapper
-    [:e-card
+    [:card
      [:h3 "Community Forum"]
      [:img {:src "/images/forum.png"}]]
-    [:e-card
+    [:card
      [:h3 "pDEX Statistics"]
      [:img {:src "/images/pdex.png"}]]
-    [:e-card
+    [:card
      [:h3 "Incognito Explorer"]
      [:img {:src "/images/explorer.png"}]]]])
 
@@ -124,7 +147,7 @@
    (about)
    (data)
    (why)
-   (mobile)
+   (phone)
    (node)
    (questions)
    (partners)
