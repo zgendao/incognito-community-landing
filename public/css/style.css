@@ -159,7 +159,7 @@ data-wrapper {
   height: 600px;
 }
 
-.why div {
+.why block {
   width: 320px;
   margin: 0 50px 0 50px;
   text-align: center;
@@ -184,7 +184,7 @@ data-wrapper {
   background: var(--gradient)
 }
 
-.phone img {
+iphone img {
   height: 550px;
   margin: 0 80px;
 }
@@ -193,19 +193,36 @@ data-wrapper {
   font-size: 18px;
   color: white;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin: 0 0 4px 0;
 }
 
 .phone p {
   font-size: 14px;
   color: white;
   font-weight: 500;
-  margin-top: 0;
+  margin: 0;
   line-height: 100%;
 }
 
 left-functions {
   text-align: right;
+}
+
+function {
+  display: flex;
+  padding: 15px 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+function div {
+  padding: 0 20px;
+}
+
+function:hover {
+  cursor: pointer;
+  border: solid 2px white;
+  box-sizing: border-box;
 }
 
 
@@ -288,8 +305,7 @@ questions-wrapper {
   background: var(--bg-light);
 }
 
-
-e-card {
+.ecosystem card {
   background: var(--gradient);
   margin: 0 40px 0 40px;
   width: 320px;
@@ -297,7 +313,7 @@ e-card {
   box-shadow: var(--shadow)
 }
 
-e-card > h3 {
+.ecosystem h3 {
   color: white;
   font-size: 24px;
   text-align: center;
