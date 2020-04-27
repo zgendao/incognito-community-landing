@@ -1,14 +1,12 @@
 (ns app.core
-  "This namespace contains your application and is the entrypoint for 'yarn start'."
   (:require [reagent.core :as r]
-            [app.landing :refer [page]]))
+            [app.views :as views]))
 
-(defn ^:dev/after-load render
-  "Render the toplevel component for this app."
+(defn ^:dev/after-load start
   []
-  (r/render [page] (.getElementById js/document "app")))
+  (r/render-component [views/app]
+                      (.getElementById js/document "app")))
 
 (defn ^:export main
-  "Run application startup logic."
   []
-  (render))
+  (start))

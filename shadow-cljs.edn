@@ -1,24 +1,20 @@
-{:builds
- {:app {:asset-path "/js"
-        :modules {:main {:init-fn app.core/main}}
+{:source-paths ["src"]
+
+ :dependencies [[binaryage/devtools "0.9.10"]
+                [proto-repl "0.3.1"]
+                [reagent "0.8.1"]]
+
+ :nrepl        {:port 3333}
+
+ :builds
+ {:app {:target :browser
         :output-dir "public/js"
-        :target :browser
-        :compiler-options
-        {
-         :pseudo-names true
-         :pretty-print true
-         ;:source-map true
-         ;:optimizations :none
-         ;:fn-invoke-direct true
-         }
-        }
-  :e2e {:ns-regexp "e2e.*"
-        :output-to "out/e2e.js"
-        :target :node-test}}
- :dependencies [[reagent "0.8.1"]
-                [alandipert/storage-atom "2.0.1"]
-                [com.cognitect/transit-cljs "0.8.256"]
-                [devcards "0.2.6"]]
- :dev-http {3000 "public"}
- :nrepl {:port 3333}
- :source-paths ["src"]}
+        :asset-path "/js"
+
+        :modules
+        {:main
+         {:entries [app.core]}}
+
+        :devtools
+        {:http-root   "public"
+         :http-port   3000}}}}

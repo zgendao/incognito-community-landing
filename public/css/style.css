@@ -1,0 +1,309 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+:root {
+  --gradient: linear-gradient(180deg, #298698 0%, #003E53 100%);
+  --text-dark: #0A3A3C;
+  --text-grey: rgba(0, 0, 0, 0.6);
+  --text-light: #F2F2F2;
+  --bg-light: #F0F6F6;
+
+  --shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  cursor: default;
+}
+
+flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+section-title {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.section-hr {
+  width: 150px;
+  border-top: 6px solid;
+  border-color: var(--text-dark)
+  border-style: solid;
+}
+
+.inverse { color: white }
+
+
+.hero {
+  height: 100vh;
+  display: flex;
+  background: var(--bg-light);
+}
+
+hero-title-bg {
+  width: 640px;
+  height: 100%;
+  background: var(--gradient);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero p {
+  font-size: 36px;
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  line-height: 110%;
+}
+
+.hero h1 {
+  font-size: 38px;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  line-height: 110%;
+}
+
+btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+join-btn {
+  background: white;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: var(--text-dark);
+  width: 80px;
+  margin-top: 20px;
+}
+
+join-btn:hover {
+  cursor: pointer;
+  background: #F0F0F0;
+}
+
+
+.about {
+  height: 600px;
+}
+
+about-text {
+  width: 620px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: justify;
+  margin-right: 80px;
+}
+
+
+.data {
+  height: 200px;
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+data-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.data d-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.data d-value {
+  font-size: 48px;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#298698, #003E53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+d-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-grey);
+  text-align: center;
+}
+
+
+.why {
+  height: 600px;
+}
+
+w-block {
+  width: 320px;
+  margin: 0 50px 0 50px;
+  text-align: center;
+}
+
+.why p {
+  font-size: 24px;
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: justify;
+  margin-top: 30px;
+}
+
+.why span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.mobile {
+  height: 930px;
+  background: var(--gradient)
+}
+
+
+.node {
+  height: 700px;
+}
+
+node-text {
+  width: 670px;
+  height: 100%
+}
+
+.node h3 {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.node p {
+  color: var(--text-grey);
+  font-size: 22px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+node-btn {
+  background: var(--gradient);
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: 120px;
+  margin-top: 10px;
+}
+
+node-btn:hover {
+  cursor: pointer;
+}
+
+iframe {
+  width: 360px;
+  height: 280px;
+  margin-left: 80px;
+}
+
+.questions {
+  height: 850px;
+  background: var(--bg-light);
+}
+
+questions-wrapper {
+  width: 640px;
+  margin-left: 60px;
+}
+
+.questions h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.questions p {
+  font-size: 18px;
+  text-align: justify;
+  color: var(--text-grey);
+}
+
+
+.partners {
+  height: 640px;
+}
+
+.partners img {
+  margin: 0 60px 50px 60px;
+}
+
+
+.ecosystem {
+  height: 620px;
+  background: var(--bg-light);
+}
+
+
+e-card {
+  background: var(--gradient);
+  margin: 0 40px 0 40px;
+  width: 320px;
+  height: 280px;
+  box-shadow: var(--shadow)
+}
+
+e-card > h3 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.spotlight {
+  height: 420px;
+  background: var(--gradient);
+  position: relative;
+}
+
+
+spotlight-text {
+  color: var(--text-light);
+  font-size: 18px;
+  text-align: justify;
+  width: 420px;
+  margin-left: 20px;
+}
+
+zgen-desc {
+  position: absolute;
+  bottom: 1%;
+
+  background: -webkit-linear-gradient(#298698, #003E53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
