@@ -1,7 +1,5 @@
 (ns app.views
-  (:require [reagent.core :refer [atom]]))
-
-(def gif (atom "buy"))
+  (:require [rum.core :as rum :refer [defcs]]))
 
 (defn section-title [text inverse]
   [:div.section-title
@@ -18,35 +16,32 @@
      [:h1 "Send any cryptocurrencies"]
      [:h1 "completely anonymously."]
      [:div.btn-wrapper
-      [:div.join-btn>a {:href "www.google.com"} "Join us"]]]]
+      [:div.join-btn [:a {:href "https://incognito.org/"} "Join us"]]]]]
    [:img {:src "/images/arts/hero.svg"}]])
 
 (defn about []
   [:div.about
-   [section-title "WHAT IS INCOGNITO?"]
+   (section-title "WHAT IS INCOGNITO?" nil)
    [:div.flex-wrapper
     [:div.about-text "Incognito is the first network that delivers privacy at scale by implementing proof-of-stake and sharding. It is not another cryptocurrency, but a privacy solution for your existing cryptocurrencies. The network is operated by a large group of small validators."]
     [:img.shard-art {:src "/images/arts/shard.svg"}]]])
 
+(defn sign [value name]
+  [:div.block
+   [:div.value value]
+   [:div.name name]])
+
 (defn data []
   [:div.data
    [:div.data-wrapper
-    [:div.block
-     [:div.value "$1.54M"]
-     [:div.name "shielded"]]
-    [:div.block
-     [:div.value "1257"]
-     [:div.name "validators"]]
-    [:div.block
-     [:div.value "40"]
-     [:div.name "dev members"]]
-    [:div.block
-     [:div.value "1.4M"]
-     [:div.name "lines of code"]]]])
+    (sign "$1.54M" "shielded")
+    (sign "1257" "validators")
+    (sign "40" "dev members")
+    (sign "1.4M" "lines of code")]])
 
 (defn why []
   [:div.why
-   [section-title "WHY CHOOSE INCOGNITO?"]
+   (section-title "WHY CHOOSE INCOGNITO?" nil)
    [:div.flex-wrapper
     [:div.block
      [:img {:src "/images/arts/block.svg"}]
@@ -58,50 +53,38 @@
      [:img {:src "/images/arts/block.svg"}]
      [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]])
 
+(def gif (atom "buy"))
+
+(defn function [name title desc1 desc2 side]
+  [:div.function {:on-click #(reset! gif name) :class (when (= name @gif) "active")}
+   (when (= "right" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])
+   [:div
+    [:h4 title]
+    [:p desc1 [:br] desc2]]
+   (when (= "left" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])])
+
 (defn phone []
   [:div.phone
-   [section-title "INCOGNITO WALLET" "inverse"]
+   (section-title "INCOGNITO WALLET" "inverse")
    [:div.flex-wrapper
     [:div.left-functions
-     [:div.function {:on-click #(reset! gif "buy") :class (when (= "buy" @gif) "active")}
-      [:div
-       [:h4 "Buy PRV"]
-       [:p "PRV is the fuel of" [:br] "Incognito’s blockchain."]]
-      [:img {:src "/images/phone/prv-icon.svg"}]]
-     [:div.function {:on-click #(reset! gif "shield") :class (when (= "shield" @gif) "active")}
-      [:div
-       [:h4 "Shield Crypt"]
-       [:p "Put your money " [:br] "safe anonimously. "]]
-      [:img {:src "/images/phone/shield-icon.svg"}]]
-     [:div.function {:on-click #(reset! gif "wallet") :class (when (= "wallet" @gif) "active")}
-      [:div
-       [:h4 "Use the Wallet"]
-       [:p "Send and receive " [:br] "shielded crypto."]]
-      [:img {:src "/images/phone/wallet-icon.svg"}]]]
+     (function "buy" "Buy PRV" "PRV is the fuel of" "Incognito’s blockchain." "left")
+     (function "shield" "Shield Crypt" "Put your money " "safe anonimously." "left")
+     (function "wallet" "Use the Wallet" "Send and receive " "shielded crypto." "left")]
+
     [:div.iphone
      [:img {:src "/images/phone/phone.svg"}]]
+
     [:div.right-functions
-     [:div.function {:on-click #(reset! gif "trade") :class (when (= "trade" @gif) "active")}
-      [:img {:src "/images/phone/trade-icon.svg"}]
-      [:div
-       [:h4 "Trade"]
-       [:p "Access to 70+ cryptos in" [:br] "decentralized exchange."]]]
-     [:div.function {:on-click #(reset! gif "stake") :class (when (= "stake" @gif) "active")}
-      [:img {:src "/images/phone/node-icon.svg"}]
-      [:div
-       [:h4 "Stake Nodes"]
-       [:p "Be a part of the network" [:br] " and earn PRV passively."]]]
-     [:div.function {:on-click #(reset! gif "forum") :class (when (= "forum" @gif) "active")}
-      [:img {:src "/images/phone/forum-icon.svg"}]
-      [:div
-       [:h4 "Join the Forum"]
-       [:p "Help the movement with" [:br] "your ideas and work."]]]]
+     (function "trade" "Trade" "Access to 70+ cryptos in" "decentralized exchange." "right")
+     (function "stake" "Stake Nodes" "Be a part of the network" " and earn PRV passively." "right")
+     (function "forum" "Join the Forum" "Help the movement with" "your ideas and work." "right")]
     [:div.small-circle]
     [:div.big-circle]]])
 
 (defn node []
   [:div.node
-   [section-title "INCOGNITO NODE"]
+   (section-title "INCOGNITO NODE" nil)
    [:div.flex-wrapper
     [:div.node-text
      [:h3 "Give people privacy. Earn passive income"]
@@ -114,7 +97,7 @@
 
 (defn questions []
   [:div.questions
-   [section-title "QUESTIONS?"]
+   (section-title "QUESTIONS?" nil)
    [:div.flex-wrapper
     [:img {:src "/images/arts/nodes.svg"}]
     [:div.questions-wrapper
@@ -127,7 +110,7 @@
 
 (defn partners []
   [:div.partners
-   [section-title "YOU ARE IN A GOOD COMPANY"]
+   (section-title "YOU ARE IN A GOOD COMPANY" nil)
    [:div.flex-wrapper
     [:img {:src "/images/partners/binance.png"}]
     [:img {:src "/images/partners/autonomous.png"}]
@@ -138,7 +121,7 @@
 
 (defn ecosystem []
   [:div.ecosystem
-   [section-title "OUR ECOSYSTEM"]
+   (section-title "OUR ECOSYSTEM" nil)
    [:div.flex-wrapper
     [:div.card
      [:h3 "Community Forum"]
@@ -152,21 +135,21 @@
 
 (defn spotlight []
   [:div.spotlight
-   [section-title "PROJECT SPOTLIGHT" "inverse"]
+   (section-title "PROJECT SPOTLIGHT" "inverse")
    [:div.flex-wrapper
     [:img {:src "/images/white-zgen-logo.svg"}]
     [:div.spotlight-text "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience. "]]
    [:div.zgen-desc "ZGEN is a bureaucracy-free online guild of makers & entrepreneurs. Our community is driven by goals & needs of the generation Z."]])
 
-(defn app []
-  [:div
-   (hero)
-   (about)
-   (data)
-   (why)
-   (phone)
-   (node)
-   (questions)
-   (partners)
-   (ecosystem)
-   (spotlight)])
+(defcs app []
+       [:div
+        (hero)
+        (about)
+        (data)
+        (why)
+        (phone)
+        (node)
+        (questions)
+        (partners)
+        (ecosystem)
+        (spotlight)])
