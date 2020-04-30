@@ -11,6 +11,10 @@
          ;:fn-invoke-direct true
 
  :dependencies [[rum "0.11.5"]
+<<<<<<< HEAD
+=======
+                ;[reagent "0.8.1"]
+>>>>>>> 9f37ac889649ac7a4fdac3be87c58b50f7becf11
                 [alandipert/storage-atom "2.0.1"]
                 [com.cognitect/transit-cljs "0.8.256"]]
  :dev-http {3000 "public"}
