@@ -205,30 +205,49 @@ iphone img {
 }
 
 left-functions {
+  display: flex;
+  flex-direction: column;
   text-align: right;
+  align-items: flex-end;
+}
+
+left-functions div {
+  padding-right: 10px;
+}
+
+right-functions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+right-functions div {
+  padding-left: 15px;
 }
 
 function {
   display: flex;
-  padding: 15px 10px;
-  margin: 20px 0;
+  padding: 15px;
+  margin: 15px 0;
   border-radius: 5px;
-}
-
-function div {
-  padding: 0 20px;
 }
 
 function:hover {
   cursor: pointer;
-  border: solid 2px white;
+  border: solid 0px white;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 0px 0px 2px white;
   box-sizing: border-box;
 }
 
-
-.node {
-  height: 700px;
+.active p, .active h4, .active {
+  background: white;
+  color: var(--text-dark);
 }
+
+.active:hover { background: white; }
+
+.node { height: 700px; }
 
 node-text {
   width: 670px;

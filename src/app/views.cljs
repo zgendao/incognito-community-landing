@@ -1,4 +1,7 @@
-(ns app.views)
+(ns app.views
+  (:require [reagent.core :refer [atom]]))
+
+(def gif (atom "buy"))
 
 (defn section-title [text inverse]
   [:section-title
@@ -16,14 +19,14 @@
      [:h1 "completely anonymously."]
      [:btn-wrapper
       [:join-btn "Join us"]]]]
-   [:img {:src "/images/hero.svg"}]])
+   [:img {:src "/images/arts/hero.svg"}]])
 
 (defn about []
   [:div.about
    [section-title "WHAT IS INCOGNITO?"]
    [:flex-wrapper
     [:about-text "Incognito is the first network that delivers privacy at scale by implementing proof-of-stake and sharding. It is not another cryptocurrency, but a privacy solution for your existing cryptocurrencies. The network is operated by a large group of small validators."]
-    [:img.shard-art {:src "/images/shard.svg"}]]])
+    [:img.shard-art {:src "/images/arts/shard.svg"}]]])
 
 (defn data []
   [:div.data
@@ -46,13 +49,13 @@
    [section-title "WHY CHOOSE INCOGNITO?"]
    [:flex-wrapper
     [:block
-     [:img {:src "/images/block.svg"}]
+     [:img {:src "/images/arts/block.svg"}]
      [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 Transaction/sec)"]]]
     [:block
-     [:img {:src "/images/block.svg"}]
+     [:img {:src "/images/arts/block.svg"}]
      [:p "One PRV " [:span "($0.4) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]
     [:block
-     [:img {:src "/images/block.svg"}]
+     [:img {:src "/images/arts/block.svg"}]
      [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]])
 
 (defn phone []
@@ -60,36 +63,36 @@
    [section-title "INCOGNITO WALLET" "inverse"]
    [:flex-wrapper
     [:left-functions
-     [:function
+     [:function {:on-click #(reset! gif "buy") :class (when (= "buy" @gif) "active")}
       [:div
        [:h4 "Buy PRV"]
        [:p "PRV is the fuel of" [:br] "Incognito’s blockchain."]]
-      [:img {:src "/images/prv-icon.svg"}]]
-     [:function
+      [:img {:src "/images/phone/prv-icon.svg"}]]
+     [:function {:on-click #(reset! gif "shield") :class (when (= "shield" @gif) "active")}
       [:div
        [:h4 "Shield Crypt"]
        [:p "Put your money " [:br] "safe anonimously. "]]
-      [:img {:src "/images/shield-icon.svg"}]]
-     [:function
+      [:img {:src "/images/phone/shield-icon.svg"}]]
+     [:function {:on-click #(reset! gif "wallet") :class (when (= "wallet" @gif) "active")}
       [:div
        [:h4 "Use the Wallet"]
        [:p "Send and receive " [:br] "shielded crypto."]]
-      [:img {:src "/images/wallet-icon.svg"}]]]
+      [:img {:src "/images/phone/wallet-icon.svg"}]]]
     [:iphone
-     [:img {:src "/images/phone.svg"}]]
+     [:img {:src "/images/phone/phone.svg"}]]
     [:right-functions
-     [:function
-      [:img {:src "/images/trade-icon.svg"}]
+     [:function {:on-click #(reset! gif "trade") :class (when (= "trade" @gif) "active")}
+      [:img {:src "/images/phone/trade-icon.svg"}]
       [:div
        [:h4 "Trade"]
        [:p "Access to 70+ cryptos in" [:br] "decentralized exchange."]]]
-     [:function
-      [:img {:src "/images/node-icon.svg"}]
+     [:function {:on-click #(reset! gif "stake") :class (when (= "stake" @gif) "active")}
+      [:img {:src "/images/phone/node-icon.svg"}]
       [:div
        [:h4 "Stake Nodes"]
        [:p "Be a part of the network" [:br] " and earn PRV passively."]]]
-     [:function
-      [:img  {:src "/images/forum-icon.svg"}]
+     [:function {:on-click #(reset! gif "forum") :class (when (= "forum" @gif) "active")}
+      [:img {:src "/images/phone/forum-icon.svg"}]
       [:div
        [:h4 "Join the Forum"]
        [:p "Help the movement with" [:br] "your ideas and work."]]]]]])
@@ -111,7 +114,7 @@
   [:div.questions
    [section-title "QUESTIONS?"]
    [:flex-wrapper
-    [:img {:src "/images/nodes.svg"}]
+    [:img {:src "/images/arts/nodes.svg"}]
     [:questions-wrapper
      [:h3 "Who made Incognito at the first place?"]
      [:p "A diverse group of 40+ scientists, cryptographers, programmers, entrepreneurs and operators worked on Incognito for 2 years before its launch."]
@@ -124,12 +127,12 @@
   [:div.partners
    [section-title "YOU ARE IN A GOOD COMPANY"]
    [:flex-wrapper
-    [:img {:src "/images/binance.png"}]
-    [:img {:src "/images/autonomous.png"}]
-    [:img {:src "/images/neo.png"}]
-    [:img {:src "/images/ontology.png"}]
-    [:img {:src "/images/zilliqa.png"}]
-    [:img {:src "/images/harmony.png"}]]])
+    [:img {:src "/images/partners/binance.png"}]
+    [:img {:src "/images/partners/autonomous.png"}]
+    [:img {:src "/images/partners/neo.png"}]
+    [:img {:src "/images/partners/ontology.png"}]
+    [:img {:src "/images/partners/zilliqa.png"}]
+    [:img {:src "/images/partners/harmony.png"}]]])
 
 (defn ecosystem []
   [:div.ecosystem
@@ -137,13 +140,13 @@
    [:flex-wrapper
     [:card
      [:h3 "Community Forum"]
-     [:img {:src "/images/forum.png"}]]
+     [:img {:src "/images/ecosystem/forum.png"}]]
     [:card
      [:h3 "pDEX Statistics"]
-     [:img {:src "/images/pdex.png"}]]
+     [:img {:src "/images/ecosystem/pdex.png"}]]
     [:card
      [:h3 "Incognito Explorer"]
-     [:img {:src "/images/explorer.png"}]]]])
+     [:img {:src "/images/ecosystem/explorer.png"}]]]])
 
 (defn spotlight []
   [:div.spotlight
