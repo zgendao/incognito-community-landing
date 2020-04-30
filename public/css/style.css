@@ -17,16 +17,20 @@ body {
   cursor: default;
 }
 
-flex-wrapper {
+.flex-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
 
+a {
+  text-decoration: none;
+  color: initial;
 }
 
 
-section-title {
+.section-title {
   height: 150px;
   display: flex;
   align-items: flex-end;
@@ -34,30 +38,30 @@ section-title {
   margin-bottom: 70px;
 }
 
-section-title h2 {
+.section-title h2 {
   font-size: 32px;
   color: var(--text-dark);
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-section-title hr {
+.section-title hr {
   width: 150px;
   border-top: 6px solid;
   border-color: var(--text-dark)
   border-style: solid;
 }
 
-.inverse { color: white }
+.inverse { color: white !important; }
 
 
-hero {
+.hero {
   display: flex;
   height: 100vh;
   background: var(--bg-light);
 }
 
-hero title-bg {
+.hero .title-bg {
   width: 640px;
   height: 100%;
   background: var(--gradient);
@@ -69,7 +73,7 @@ hero title-bg {
   justify-content: center;
 }
 
-hero p {
+.hero p {
   font-size: 36px;
   color: white;
   font-weight: 400;
@@ -77,7 +81,7 @@ hero p {
   line-height: 110%;
 }
 
-hero h1 {
+.hero h1 {
   font-size: 38px;
   color: white;
   font-weight: 600;
@@ -85,12 +89,12 @@ hero h1 {
   line-height: 110%;
 }
 
-btn-wrapper {
+.btn-wrapper {
   display: flex;
   justify-content: flex-start;
 }
 
-join-btn {
+.join-btn {
   background: white;
   text-align: center;
   font-size: 20px;
@@ -100,18 +104,18 @@ join-btn {
   margin-top: 20px;
 }
 
-join-btn:hover {
+.join-btn:hover {
   cursor: pointer;
   background: #F0F0F0;
 }
 
 
-about {
+.about {
   display: block;
   height: 600px;
 }
 
-about-text {
+.about-text {
   width: 620px;
   font-size: 24px;
   font-weight: 500;
@@ -121,7 +125,7 @@ about-text {
 }
 
 
-data {
+.data {
   height: 200px;
   background: var(--bg-light);
   display: flex;
@@ -129,18 +133,18 @@ data {
   justify-content: center;
 }
 
-data-wrapper {
+.data-wrapper {
   width: 80%;
   display: flex;
   justify-content: space-around;
 }
 
-data div {
+.data .block {
   display: flex;
   flex-direction: column;
 }
 
-data value {
+.data .value {
   font-size: 48px;
   font-weight: 900;
   background: -webkit-linear-gradient(#298698, #003E53);
@@ -149,7 +153,7 @@ data value {
   text-align: center;
 }
 
-data name {
+.data .name {
   font-size: 22px;
   font-weight: 500;
   color: var(--text-grey);
@@ -157,18 +161,18 @@ data name {
 }
 
 
-why {
+.why {
   display: block;
   height: 600px;
 }
 
-why block {
+.why .block {
   width: 320px;
   margin: 0 50px 0 50px;
   text-align: center;
 }
 
-why p {
+.why p {
   font-size: 24px;
   color: var(--text-dark);
   font-weight: 600;
@@ -176,31 +180,31 @@ why p {
   margin-top: 30px;
 }
 
-why span {
+.why span {
   font-size: 18px;
   font-weight: 400;
 }
 
 
-phone {
+.phone {
   display: block;
   height: 930px;
   background: var(--gradient);
 }
 
-iphone img {
+.iphone img {
   height: 550px;
   margin: 0 80px;
 }
 
-phone h4 {
+.phone h4 {
   font-size: 18px;
   color: white;
   font-weight: 600;
   margin: 0 0 4px 0;
 }
 
-phone p {
+.phone p {
   font-size: 14px;
   color: white;
   font-weight: 500;
@@ -208,30 +212,30 @@ phone p {
   line-height: 100%;
 }
 
-left-functions {
+.left-functions {
   display: flex;
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
 }
 
-right-functions {
+.right-functions {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-left-functions div { padding-right: 15px; }
-right-functions div { padding-left: 15px; }
+.left-functions div { padding-right: 15px; }
+.right-functions div { padding-left: 15px; }
 
-function {
+.function {
   display: flex;
   padding: 15px;
   margin: 15px 0;
   border-radius: 5px;
 }
 
-function:hover {
+.function:hover {
   cursor: pointer;
   border: solid 0px white;
   background: rgba(255, 255, 255, 0.1);
@@ -248,12 +252,12 @@ function:hover {
   transition: all .3s;
 }
 
-phone function, phone iphone {
+.phone .function, .phone .iphone {
   z-index: 1;
   position: relative;
 }
 
-small-circle, big-circle {
+.small-circle, .big-circle {
   position: absolute;
   left: 0;
   right: 0;
@@ -265,37 +269,37 @@ small-circle, big-circle {
   opacity: 0.04;
 }
 
-big-circle {
+.big-circle {
   width: 700px;
   height: 700px;
   opacity: 0.03;
 }
 
 
-node {
+.node {
   display: block;
   height: 700px;
 }
 
-node-text {
+.node-text {
   width: 670px;
   height: 100%
 }
 
-node h3 {
+.node h3 {
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
 }
 
-node p {
+.node p {
   color: var(--text-grey);
   font-size: 22px;
   text-align: justify;
   font-weight: 500;
 }
 
-node-btn {
+.node-btn {
   background: var(--gradient);
   color: white;
   font-size: 22px;
@@ -304,7 +308,7 @@ node-btn {
   margin-top: 10px;
 }
 
-node-btn:hover {
+.node-btn:hover {
   cursor: pointer;
 }
 
@@ -314,48 +318,48 @@ iframe {
   margin-left: 80px;
 }
 
-questions {
+.questions {
   display: block;
   height: 850px;
   background: var(--bg-light);
 }
 
-questions-wrapper {
+.questions-wrapper {
   width: 640px;
   margin-left: 60px;
 }
 
-questions h3 {
+.questions h3 {
   font-size: 30px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 20px;
 }
 
-questions p {
+.questions p {
   font-size: 18px;
   text-align: justify;
   color: var(--text-grey);
 }
 
 
-partners {
+.partners {
   display: block;
   height: 640px;
 }
 
-partners img {
+.partners img {
   margin: 0 60px 50px 60px;
 }
 
 
-ecosystem {
+.ecosystem {
   display: block;
   height: 620px;
   background: var(--bg-light);
 }
 
-ecosystem card {
+.ecosystem .card {
   background: var(--gradient);
   margin: 0 40px 0 40px;
   width: 320px;
@@ -363,14 +367,14 @@ ecosystem card {
   box-shadow: var(--shadow)
 }
 
-ecosystem h3 {
+.ecosystem h3 {
   color: white;
   font-size: 24px;
   text-align: center;
 }
 
 
-spotlight {
+.spotlight {
   display: block;
   height: 420px;
   background: var(--gradient);
@@ -378,7 +382,7 @@ spotlight {
 }
 
 
-spotlight-text {
+.spotlight-text {
   color: var(--text-light);
   font-size: 18px;
   text-align: justify;
@@ -386,7 +390,7 @@ spotlight-text {
   margin-left: 20px;
 }
 
-zgen-desc {
+.zgen-desc {
   position: absolute;
   bottom: 1%;
 
