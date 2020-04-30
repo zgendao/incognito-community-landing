@@ -22,6 +22,7 @@ flex-wrapper {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
 
@@ -50,13 +51,13 @@ section-title hr {
 .inverse { color: white }
 
 
-.hero {
-  height: 100vh;
+hero {
   display: flex;
+  height: 100vh;
   background: var(--bg-light);
 }
 
-hero-title-bg {
+hero title-bg {
   width: 640px;
   height: 100%;
   background: var(--gradient);
@@ -68,7 +69,7 @@ hero-title-bg {
   justify-content: center;
 }
 
-.hero p {
+hero p {
   font-size: 36px;
   color: white;
   font-weight: 400;
@@ -76,7 +77,7 @@ hero-title-bg {
   line-height: 110%;
 }
 
-.hero h1 {
+hero h1 {
   font-size: 38px;
   color: white;
   font-weight: 600;
@@ -105,7 +106,8 @@ join-btn:hover {
 }
 
 
-.about {
+about {
+  display: block;
   height: 600px;
 }
 
@@ -119,7 +121,7 @@ about-text {
 }
 
 
-.data {
+data {
   height: 200px;
   background: var(--bg-light);
   display: flex;
@@ -133,12 +135,12 @@ data-wrapper {
   justify-content: space-around;
 }
 
-.data div {
+data div {
   display: flex;
   flex-direction: column;
 }
 
-.data value {
+data value {
   font-size: 48px;
   font-weight: 900;
   background: -webkit-linear-gradient(#298698, #003E53);
@@ -147,7 +149,7 @@ data-wrapper {
   text-align: center;
 }
 
-.data name {
+data name {
   font-size: 22px;
   font-weight: 500;
   color: var(--text-grey);
@@ -155,17 +157,18 @@ data-wrapper {
 }
 
 
-.why {
+why {
+  display: block;
   height: 600px;
 }
 
-.why block {
+why block {
   width: 320px;
   margin: 0 50px 0 50px;
   text-align: center;
 }
 
-.why p {
+why p {
   font-size: 24px;
   color: var(--text-dark);
   font-weight: 600;
@@ -173,15 +176,16 @@ data-wrapper {
   margin-top: 30px;
 }
 
-.why span {
+why span {
   font-size: 18px;
   font-weight: 400;
 }
 
 
-.phone {
+phone {
+  display: block;
   height: 930px;
-  background: var(--gradient)
+  background: var(--gradient);
 }
 
 iphone img {
@@ -189,14 +193,14 @@ iphone img {
   margin: 0 80px;
 }
 
-.phone h4 {
+phone h4 {
   font-size: 18px;
   color: white;
   font-weight: 600;
   margin: 0 0 4px 0;
 }
 
-.phone p {
+phone p {
   font-size: 14px;
   color: white;
   font-weight: 500;
@@ -211,19 +215,14 @@ left-functions {
   align-items: flex-end;
 }
 
-left-functions div {
-  padding-right: 10px;
-}
-
 right-functions {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-right-functions div {
-  padding-left: 15px;
-}
+left-functions div { padding-right: 15px; }
+right-functions div { padding-left: 15px; }
 
 function {
   display: flex;
@@ -240,27 +239,56 @@ function:hover {
   box-sizing: border-box;
 }
 
-.active p, .active h4, .active {
-  background: white;
+.active p, .active h4 {
   color: var(--text-dark);
 }
 
-.active:hover { background: white; }
+.active, .active:hover {
+  background: white;
+  transition: all .3s;
+}
 
-.node { height: 700px; }
+phone function, phone iphone {
+  z-index: 1;
+  position: relative;
+}
+
+small-circle, big-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.04;
+}
+
+big-circle {
+  width: 700px;
+  height: 700px;
+  opacity: 0.03;
+}
+
+
+node {
+  display: block;
+  height: 700px;
+}
 
 node-text {
   width: 670px;
   height: 100%
 }
 
-.node h3 {
+node h3 {
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
 }
 
-.node p {
+node p {
   color: var(--text-grey);
   font-size: 22px;
   text-align: justify;
@@ -286,7 +314,8 @@ iframe {
   margin-left: 80px;
 }
 
-.questions {
+questions {
+  display: block;
   height: 850px;
   background: var(--bg-light);
 }
@@ -296,35 +325,37 @@ questions-wrapper {
   margin-left: 60px;
 }
 
-.questions h3 {
+questions h3 {
   font-size: 30px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 20px;
 }
 
-.questions p {
+questions p {
   font-size: 18px;
   text-align: justify;
   color: var(--text-grey);
 }
 
 
-.partners {
+partners {
+  display: block;
   height: 640px;
 }
 
-.partners img {
+partners img {
   margin: 0 60px 50px 60px;
 }
 
 
-.ecosystem {
+ecosystem {
+  display: block;
   height: 620px;
   background: var(--bg-light);
 }
 
-.ecosystem card {
+ecosystem card {
   background: var(--gradient);
   margin: 0 40px 0 40px;
   width: 320px;
@@ -332,14 +363,15 @@ questions-wrapper {
   box-shadow: var(--shadow)
 }
 
-.ecosystem h3 {
+ecosystem h3 {
   color: white;
   font-size: 24px;
   text-align: center;
 }
 
 
-.spotlight {
+spotlight {
+  display: block;
   height: 420px;
   background: var(--gradient);
   position: relative;

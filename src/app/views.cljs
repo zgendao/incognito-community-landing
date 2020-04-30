@@ -10,8 +10,8 @@
     [:hr {:class [inverse]}]]])
 
 (defn hero []
-  [:div.hero
-   [:hero-title-bg
+  [:hero
+   [:title-bg
     [:div
      [:img {:src "/images/hero-logo.svg"}]
      [:p "is a privacy movement."]
@@ -22,14 +22,14 @@
    [:img {:src "/images/arts/hero.svg"}]])
 
 (defn about []
-  [:div.about
+  [:about
    [section-title "WHAT IS INCOGNITO?"]
    [:flex-wrapper
     [:about-text "Incognito is the first network that delivers privacy at scale by implementing proof-of-stake and sharding. It is not another cryptocurrency, but a privacy solution for your existing cryptocurrencies. The network is operated by a large group of small validators."]
     [:img.shard-art {:src "/images/arts/shard.svg"}]]])
 
 (defn data []
-  [:div.data
+  [:data
    [:data-wrapper
     [:div
      [:value "$1.54M"]
@@ -45,7 +45,7 @@
      [:name "lines of code"]]]])
 
 (defn why []
-  [:div.why
+  [:why
    [section-title "WHY CHOOSE INCOGNITO?"]
    [:flex-wrapper
     [:block
@@ -59,7 +59,7 @@
      [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]])
 
 (defn phone []
-  [:div.phone
+  [:phone
    [section-title "INCOGNITO WALLET" "inverse"]
    [:flex-wrapper
     [:left-functions
@@ -95,10 +95,12 @@
       [:img {:src "/images/phone/forum-icon.svg"}]
       [:div
        [:h4 "Join the Forum"]
-       [:p "Help the movement with" [:br] "your ideas and work."]]]]]])
+       [:p "Help the movement with" [:br] "your ideas and work."]]]]
+    [:small-circle]
+    [:big-circle]]])
 
 (defn node []
-  [:div.node
+  [:node
    [section-title "INCOGNITO NODE"]
    [:flex-wrapper
     [:node-text
@@ -111,7 +113,7 @@
     [:iframe {:src "https://www.youtube.com/embed/bafTu0kGfq4" :frameBorder "0" :allowFullScreen "allowFullScreen"}]]])
 
 (defn questions []
-  [:div.questions
+  [:questions
    [section-title "QUESTIONS?"]
    [:flex-wrapper
     [:img {:src "/images/arts/nodes.svg"}]
@@ -124,7 +126,7 @@
      [:p "A decentralized autonomous organization was designed to fund protocol development and network growth. Join the Incognito community now and you will be a part of this revolutionary movement. You could make proposals and get funding!"]]]])
 
 (defn partners []
-  [:div.partners
+  [:partners
    [section-title "YOU ARE IN A GOOD COMPANY"]
    [:flex-wrapper
     [:img {:src "/images/partners/binance.png"}]
@@ -135,7 +137,7 @@
     [:img {:src "/images/partners/harmony.png"}]]])
 
 (defn ecosystem []
-  [:div.ecosystem
+  [:ecosystem
    [section-title "OUR ECOSYSTEM"]
    [:flex-wrapper
     [:card
@@ -149,7 +151,7 @@
      [:img {:src "/images/ecosystem/explorer.png"}]]]])
 
 (defn spotlight []
-  [:div.spotlight
+  [:spotlight
    [section-title "PROJECT SPOTLIGHT" "inverse"]
    [:flex-wrapper
     [:img {:src "/images/white-zgen-logo.svg"}]
