@@ -8,7 +8,7 @@
     "start": "shadow-cljs watch app",
     "build": "yarn clean && shadow-cljs release app",
     "test": "shadow-cljs compile test && node out/test.js",
-    "clean": "rimraf public/js"
+    "clean": "rm -rf public/js"
   },
   "devDependencies": {
     "shadow-cljs": "^2.8.95"
