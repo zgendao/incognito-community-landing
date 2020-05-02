@@ -68,7 +68,10 @@ section {
   border-style: solid;
 }
 
-.inverse { color: white !important; }
+.inverse {
+  color: white !important;
+  border-color: white !important; 
+}
 
 .hero {
   padding: 0;
