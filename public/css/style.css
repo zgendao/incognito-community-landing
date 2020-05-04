@@ -8,7 +8,9 @@
   --text-light: #F2F2F2;
   --bg-light: #F0F6F6;
 
-  --shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  --shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+  --shadow-hover: 0px 8px 28px 0px rgba(0,0,0,.1), 0px 15px 20px 0px rgba(0,0,0,.1);
+
 }
 
 * {
@@ -30,7 +32,7 @@ body {
 
 a {
   text-decoration: none;
-  color: initial;
+  color: inherit;
 }
 
 section {
@@ -70,7 +72,7 @@ section {
 
 .inverse {
   color: white !important;
-  border-color: white !important; 
+  border-color: white !important;
 }
 
 .hero {
@@ -191,7 +193,7 @@ section {
 }
 
 .why .block {
-  width: 33.333333%;
+  width: 33.3%;
   padding: 0 50px;
   text-align: center;
 }
@@ -290,14 +292,16 @@ section {
 }
 
 .node-text {
-  width: 65%;
+  width: 60%;
 }
+
 .node .video-wrapper {
-  width: 35%;
+  width: 40%;
   text-align: right;
+
 }
 .node iframe {
-  width: 360px;
+  width: 400px;
   height: 280px;
 }
 
@@ -309,7 +313,7 @@ section {
 
 .node p {
   color: var(--text-grey);
-  font-size: 22px;
+  font-size: 20px;
   text-align: justify;
   font-weight: 500;
 }
@@ -325,6 +329,7 @@ section {
 
 .node-btn:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .questions {
@@ -365,7 +370,14 @@ section {
   margin: 20px 30px;
   width: 320px;
   height: 280px;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+  transition: all 0.5s cubic-bezier(.25,.8,.25,1)
+}
+
+.ecosystem .card:hover {
+  box-shadow: var(--shadow-hover);
+  transition: .3s;
+
 }
 
 .ecosystem h3 {
@@ -388,6 +400,11 @@ section {
   text-align: justify;
   width: 420px;
   margin-left: 20px;
+}
+
+.spotlight img:hover {
+  filter: brightness(1000%);
+  cursor: pointer;
 }
 
 .zgen-desc {

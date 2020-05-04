@@ -16,7 +16,7 @@
       [:p "is a privacy movement."]
       [:h1 "Send any cryptocurrencies" [:br] "completely anonymously."]
       [:.btn-wrapper
-       [:.join-btn [:a {:href "https://incognito.org/"} "Join us"]]]]]
+       [:.join-btn [:a {:href "https://incognito.org/" :target "_blank"} "Join us"]]]]]
     [:.hero-img
      [:img {:src "/images/arts/hero.svg"}]]]])
 
@@ -39,7 +39,7 @@
    [:.container
     [:.flex-wrapper
      (sign "$1.54M" "shielded")
-     (sign "1257" "validators")
+     (sign "1308" "validators")
      (sign "40" "dev members")
      (sign "1.4M" "lines of code")]]])
 
@@ -50,17 +50,17 @@
     [:.flex-wrapper
      [:.block.flex-wrapper
       [:.img-container
-       [:img {:src "/images/arts/block.svg"}]]
+       [:img {:src "/images/arts/fast.svg"}]]
       [:.text-container
-       [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 Transaction/sec)"]]]]
+       [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 transaction/sec)"]]]]
      [:.block.flex-wrapper
       [:.img-container
-       [:img {:src "/images/arts/block.svg"}]]
+       [:img {:src "/images/arts/cheap.svg"}]]
       [:.text-container
-       [:p "One PRV " [:span "($0.4) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]]
+       [:p "One PRV " [:span "($0.6) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]]
      [:.block.flex-wrapper
       [:.img-container
-       [:img {:src "/images/arts/block.svg"}]]
+       [:img {:src "/images/arts/open.svg"}]]
       [:.text-container
        [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]]]])
 
@@ -98,11 +98,11 @@
     [:.flex-wrapper
      [:.node-text
       [:h3 "Give people privacy. Earn passive income"]
-      [:p "You could buy a physical node, or start operating your virtual node on your server. Prerequirements are staking 1750 PRV (~$700) which you could get back anytime if you change your mind."]
+      [:p "You could buy a physical node, or start operating your virtual node on your server. Prerequirements are staking 1750 PRV (~$1000) which you could get back anytime if you change your mind."]
       [:p "Incognito nodes have a low power usage and they are ECO friendly."]
       [:p "Rewards from operating a node is random, but you could expect a decent 45%-100% yearly earning in the beginning."]
       [:.btn-wrapper
-       [:.node-btn "Learn More"]]]
+       [:.node-btn [:a {:href "https://incognito.org/t/node/338" :target "_blank"} "Learn More"]]]]
      [:.video-wrapper
       [:iframe {:src "https://www.youtube.com/embed/bafTu0kGfq4" :frameBorder "0" :allowFullScreen "allowFullScreen"}]]]]])
 
@@ -140,20 +140,20 @@
     [:.flex-wrapper
      [:.card
       [:h3 "Community Forum"]
-      [:img {:src "/images/ecosystem/forum.png"}]]
+      [:a {:href "https://incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/forum.png"}]]]
      [:.card
       [:h3 "pDEX Statistics"]
-      [:img {:src "/images/ecosystem/pdex.png"}]]
+      [:a {:href "https://pdex.incognito.best" :target "_blank"} [:img {:src "/images/ecosystem/pdex.png"}]]]
      [:.card
       [:h3 "Incognito Explorer"]
-      [:img {:src "/images/ecosystem/explorer.png"}]]]]])
+      [:a {:href "https://mainnet.incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/explorer.png"}]]]]]])
 
 (defn spotlight []
   [:section.spotlight
    [:.container
     (section-title "PROJECT SPOTLIGHT" "inverse")
     [:.flex-wrapper
-     [:img {:src "/images/white-zgen-logo.svg"}]
+     [:a {:href "https://zgen.hu" :target "_blank"} [:img {:src "/images/white-zgen-logo.svg"}]]
      [:.spotlight-text "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience. "]]
     [:.zgen-desc "ZGEN is a bureaucracy-free online guild of makers & entrepreneurs. Our community is driven by goals & needs of the generation Z."]]])
 
