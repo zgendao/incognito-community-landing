@@ -6,7 +6,7 @@
 
 (defc section-title [text inverse]
       [:.section-title
-       [:div (anim "fadeInUp" ".1s")
+       [:div (anim "fadeInUp")
         [:h2 {:class inverse} text]
         [:hr {:class [inverse]}]]])
 
@@ -41,27 +41,27 @@
       [:section.data
        [:.container
         [:.flex-wrapper
-         (sign "$1.54M" "shielded" ".2s")
-         (sign "1308" "validators" ".3s")
-         (sign "40" "dev members" ".4s")
-         (sign "1.4M" "lines of code" ".5s")]]])
+         (sign "$1.54M" "shielded" ".1s")
+         (sign "1308" "validators" ".2s")
+         (sign "40" "dev members" ".3s")
+         (sign "1.4M" "lines of code" ".4s")]]])
 
 (defc why []
       [:section.why
        [:.container
         (section-title "WHY CHOOSE INCOGNITO?" nil)
         [:.flex-wrapper
-         [:.block.flex-wrapper (anim "fadeInUp" ".3s")
+         [:.block.flex-wrapper (anim "fadeInUp" ".2s")
           [:.img-container
            [:img {:src "/images/arts/fast.svg"}]]
           [:.text-container
            [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 transaction/sec)"]]]]
-         [:.block.flex-wrapper (anim "fadeInUp" ".5s")
+         [:.block.flex-wrapper (anim "fadeInUp" ".4s")
           [:.img-container
            [:img {:src "/images/arts/cheap.svg"}]]
           [:.text-container
            [:p "One PRV " [:span "($0.7) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]]
-         [:.block.flex-wrapper (anim "fadeInUp" ".7s")
+         [:.block.flex-wrapper (anim "fadeInUp" ".6s")
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
@@ -103,11 +103,11 @@
         [:.flex-wrapper
          [:.node-text
           [:h3 (anim "fadeInUp" ".1s") "Give people privacy. Earn passive income"]
-          [:div (anim "fadeInUp" ".3s")
+          [:div (anim "fadeInUp" ".2s")
            [:p  "You could buy a physical node, or start operating your virtual node on your server. Prerequirements are staking 1750 PRV (~$1200) which you could get back anytime if you change your mind."]
            [:p  "Incognito nodes have a low power usage and they are ECO friendly."]
            [:p  "Rewards from operating a node is random, but you could expect a decent 45%-100% yearly earning in the beginning."]]
-          [:.btn-wrapper (anim "fadeInUp" ".5s")
+          [:.btn-wrapper (anim "fadeInUp" ".3s")
            [:.node-btn [:a {:href "https://incognito.org/t/node/338" :target "_blank"} "Learn More"]]]]
          [:.video-wrapper (anim "fadeIn" ".1s")
           [:iframe {:src "https://www.youtube.com/embed/bafTu0kGfq4" :frameBorder "0" :allowFullScreen "allowFullScreen"}]]]]])
@@ -123,10 +123,10 @@
           [:div (anim "fadeInUp" ".2s")
            [:h3 "Who made Incognito at the first place?"]
            [:p "A diverse group of 40+ scientists, cryptographers, programmers, entrepreneurs and operators worked on Incognito for 2 years before its launch."]]
-          [:div (anim "fadeInUp" ".4s")
+          [:div (anim "fadeInUp" ".3s")
            [:h3 "How secure is using Incognito?"]
            [:p "You hold your own private keys on your wallet. Always make a backup and store an offline copy of your private keys to be safe! Incognito doesn’t have an access to your accounts and cannot recover them."]]
-          [:div (anim "fadeInUp" ".5s")
+          [:div (anim "fadeInUp" ".4s")
            [:h3 "What nis the future of Incognito?"]
            [:p "A decentralized autonomous organization was designed to fund protocol development and network growth. Join the Incognito community now and you will be a part of this revolutionary movement. You could make proposals and get funding!"]]]]]])
 
@@ -161,7 +161,7 @@
       [:section.spotlight
        [:.container
         (section-title "PROJECT SPOTLIGHT" "inverse")
-        [:.flex-wrapper (anim "fadeInUp" ".3s")
+        [:.flex-wrapper (anim "fadeInUp" ".2s")
          [:a {:href "https://zgen.hu" :target "_blank"} [:img {:src "/images/white-zgen-logo.svg"}]]
          [:.spotlight-text "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience. "]]
         [:.zgen-desc "ZGEN is a bureaucracy-free online guild of makers & entrepreneurs. Our community is driven by goals & needs of the generation Z."]]])

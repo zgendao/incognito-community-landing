@@ -133,7 +133,12 @@
     .questions .img-wrapper img {
         width: 100%;
     }
+
+    .section-title {
+      margin-bottom: 50px;
+    }
   }
+
   @media (max-width: 575px) {
     .section-title h2 {
         font-size: 26px;
@@ -189,4 +194,5 @@
     .spotlight-text {
         margin: 0;
     }
+
   }
