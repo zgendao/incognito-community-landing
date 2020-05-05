@@ -1,4 +1,3 @@
-
   @media (max-width: 1200px) {
     .hero .title-bg img {
         width: 80%;
@@ -37,7 +36,7 @@
         width: 80%;
         padding-right: 60px;
     }
-    
+
     .phone .container > .flex-wrapper > div {
         width: 100%;
         padding: 20px 5px;
@@ -110,7 +109,7 @@
     .section-title h2 {
         font-size: 26px;
     }
-    
+
     .hero .title-bg {
         padding: 0 30px;
     }
@@ -153,7 +152,7 @@
     .node-text p {
         font-size: 18px;
     }
-    
+
     .questions h3 {
         font-size: 24px;
     }
@@ -162,4 +161,3 @@
         margin: 0;
     }
   }
-  

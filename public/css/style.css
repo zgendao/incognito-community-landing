@@ -217,7 +217,7 @@ section {
 }
 
 .phone .container > .flex-wrapper > div {
-  width: 33.333333%;
+  width: 33.3%;
   padding: 0 20px;
   z-index: 1;
 }
@@ -338,6 +338,7 @@ section {
 
 .questions .img-wrapper {
   width: 50%;
+  padding-right: 2vw;
 }
 .questions-wrapper {
   width: 50%;
