@@ -226,8 +226,25 @@ section {
   text-align: center;
 }
 
-.iphone img {
-  height: 550px;
+.iphoneMockup {
+  height: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.notchMockup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 140px;
+  margin: 16.5px auto;
+  z-index: 1;
+}
+.phoneScreen {
+  position:absolute;
+  left:0;
+  right:0;
+  border-radius: 25px;
+  margin: 17px auto;
 }
 
 .left-functions .function {
