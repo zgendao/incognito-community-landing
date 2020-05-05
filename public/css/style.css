@@ -35,6 +35,13 @@ a {
   color: inherit;
 }
 
+.link-color {
+  color: #278395;
+}
+.link-color:hover {
+  opacity: 0.7;
+}
+
 section {
   padding-bottom: 60px;
 }
@@ -355,7 +362,6 @@ section {
 
 .questions .img-wrapper {
   width: 50%;
-  padding-right: 2vw;
 }
 .questions-wrapper {
   width: 50%;

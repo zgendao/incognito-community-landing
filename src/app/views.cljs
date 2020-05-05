@@ -65,7 +65,7 @@
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
-           [:p "It’s completely open-source " [:span "and contributed by members of a "] "global community"]]]]]])
+           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and ontributed by members of a "] " global community"]]]]]])
 
 (def app-state (atom "buy"))
 (defc function < reactive [name title desc side]
