@@ -1,4 +1,18 @@
-
+  @media (max-width: 1500px) {
+    .container {
+      max-width: 1140px;
+    }
+    .iphoneMockup {
+      height: 550px;
+    }
+    .notchMockup {
+      width: 130px;
+    }
+    .phoneScreen {
+      height: 515px;
+      width: 238px;
+    }
+  }
   @media (max-width: 1200px) {
     .hero .title-bg img {
         width: 80%;
@@ -41,6 +55,19 @@
     .phone .container > .flex-wrapper > div {
         width: 100%;
         padding: 20px 5px;
+    }
+    .iphoneMockup {
+        height: 413px;
+    }
+    .notchMockup {
+        width: 100px;
+        margin: 13.5px auto;
+    }
+    .phoneScreen {
+        height: 385px;
+        width: 178px;
+        margin-top: 14px;
+        border-radius: 20px;
     }
 
     .left-functions .function {

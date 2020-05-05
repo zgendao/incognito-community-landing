@@ -84,7 +84,9 @@
           (function "wallet" "Use the Wallet" "Send and receive shielded crypto." "left")]
 
          [:.iphone
-          [:img {:src "/images/phone/phone.svg"}]]
+          [:img.iphoneMockup {:src "/images/phone/phone.svg"}]
+          [:img.notchMockup {:src "/images/phone/notch.png"}]
+          [:img.phoneScreen {:src "/images/phone/tempScreenshot.jpg" :height "545" :width "252"}]]
 
          [:.right-functions.flex-wrapper
           (function "trade" "Trade" "Access to 70+ cryptos in decentralized exchange." "right")
