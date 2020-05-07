@@ -65,7 +65,7 @@
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
-           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and ontributed by members of a "] " global community"]]]]]])
+           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and contributed by members of a "] " global community"]]]]]])
 
 (def app-state (atom "buy"))
 (defc function < reactive [name title desc side]
@@ -83,7 +83,7 @@
         [:.flex-wrapper.background-circles
          [:.left-functions.flex-wrapper (anim "fadeInLeft")
           (function "buy" "Buy PRV" "PRV is the fuel of Incognito’s blockchain. Buy some first." "left")
-          (function "shield" "Shield Crypt" "Put your cryptocurrencies safe anonimously." "left")
+          (function "shield" "Shield Crypto" "Put your cryptocurrencies safe anonimously." "left")
           (function "wallet" "Use the Wallet" "Send and receive shielded crypto in the app." "left")]
 
          [:.iphone (anim "fadeInUp")
@@ -133,7 +133,7 @@
 (defc partners []
       [:section.partners
        [:.container
-        (section-title "YOU ARE IN A GOOD COMPANY" nil)
+        (section-title "YOU ARE IN GOOD COMPANY" nil)
         [:.flex-wrapper (anim "fadeIn" ".2s")
          [:img {:src "/images/partners/binance.png"}]
          [:img {:src "/images/partners/autonomous.png"}]
