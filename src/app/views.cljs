@@ -152,7 +152,7 @@
           [:a {:href "https://incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/forum.png"}]]]
          [:.card (anim "fadeInUp" ".4s")
           [:h3 "Incscan"]
-          [:a {:href "https://pdex.incognito.best" :target "_blank"} [:img {:src "/images/ecosystem/pdex.png"}]]]
+          [:a {:href "https://incscan.io" :target "_blank"} [:img {:src "/images/ecosystem/pdex.png"}]]]
          [:.card (anim "fadeInUp" ".6s")
           [:h3 "Incognito Explorer"]
           [:a {:href "https://mainnet.incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/explorer.png"}]]]
