@@ -5,9 +5,9 @@
         :target :browser
         :compiler-options
         {:pseudo-names true
-         :pretty-print true}}}
+         :pretty-print true
+         :optimizations :advanced}}}
          ;:source-map true
-         ;:optimizations :none
          ;:fn-invoke-direct true
 
  :dependencies [[rum "0.11.5"]

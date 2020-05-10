@@ -67,7 +67,7 @@
           [:.text-container
            [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and ontributed by members of a "] " global community"]]]]]])
 
-(def app-state (atom "buy"))
+(def app-state (atom "shield"))
 (defc function < reactive [name title desc side]
       [:.function {:on-click #(reset! app-state name) :class (when (= name (str (react app-state))) "active")}
        (when (= "right" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])
@@ -76,20 +76,20 @@
         [:p desc]]
        (when (= "left" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])])
 
-(defc phone []
+(defc phone < reactive []
       [:section.phone
        [:.container
         (section-title "INCOGNITO WALLET" "inverse")
         [:.flex-wrapper.background-circles
          [:.left-functions.flex-wrapper (anim "fadeInLeft")
-          (function "buy" "Buy PRV" "PRV is the fuel of Incognito’s blockchain. Buy some first." "left")
-          (function "shield" "Shield Crypt" "Put your cryptocurrencies safe anonimously." "left")
+          (function "shield" "Shield Crypto" "Put your cryptocurrencies safe anonimously." "left")
+          (function "buy" "Buy PRV" "PRV is the fuel of Incognito’s blockchain." "left")
           (function "wallet" "Use the Wallet" "Send and receive shielded crypto in the app." "left")]
 
          [:.iphone (anim "fadeInUp")
           [:img.iphoneMockup {:src "/images/phone/phone.svg"}]
           [:img.notchMockup {:src "/images/phone/notch.png"}]
-          [:img.phoneScreen {:src "/images/phone/tempScreenshot.jpg" :height "545" :width "252"}]]
+          [:img.phoneScreen {:src (str "/images/phone/" (str (react app-state)) "-gif.jpg") :height "545" :width "252"}]]
 
          [:.right-functions.flex-wrapper (anim "fadeInRight")
           (function "trade" "Trade" "Access to 70+ cryptos in decentralized exchange." "right")
