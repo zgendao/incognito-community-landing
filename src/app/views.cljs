@@ -65,11 +65,14 @@
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
-           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and ontributed by members of a "] " global community"]]]]]])
+           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and contributed by members of a "] " global community"]]]]]])
+
+(defn loadvid []
+  (.load (.getElementById js/document "phoneVideo")))
 
 (def app-state (atom "shield"))
 (defc function < reactive [name title desc side]
-      [:.function {:on-click #(reset! app-state name) :class (when (= name (str (react app-state))) "active")}
+      [:.function {:on-click #(do  (reset! app-state name) (loadvid)) :class (when (= name (str (react app-state))) "active")}
        (when (= "right" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])
        [:div
         [:h4 title]
@@ -89,7 +92,8 @@
          [:.iphone (anim "fadeInUp")
           [:img.iphoneMockup {:src "/images/phone/phone.svg"}]
           [:img.notchMockup {:src "/images/phone/notch.png"}]
-          [:img.phoneScreen {:src (str "/images/phone/" (str (react app-state)) "-gif.jpg") :height "545" :width "252"}]]
+          [:video.phoneScreen#phoneVideo {:height "545" :width "252" :mute "mute" :autoPlay "autoPlay" :loop "loop"}
+           [:source {:src (str "/images/phone/screenVideos/" (str (react app-state))  ".mp4") :type "video/mp4"}]]]
 
          [:.right-functions.flex-wrapper (anim "fadeInRight")
           (function "trade" "Trade" "Access to 70+ cryptos in decentralized exchange." "right")
@@ -127,35 +131,42 @@
            [:h3 "How secure is using Incognito?"]
            [:p "You hold your own private keys on your wallet. Always make a backup and store an offline copy of your private keys to be safe! Incognito doesn’t have an access to your accounts and cannot recover them."]]
           [:div (anim "fadeInUp" ".4s")
-           [:h3 "What nis the future of Incognito?"]
+           [:h3 "What is the future of Incognito?"]
            [:p "A decentralized autonomous organization was designed to fund protocol development and network growth. Join the Incognito community now and you will be a part of this revolutionary movement. You could make proposals and get funding!"]]]]]])
 
 (defc partners []
       [:section.partners
        [:.container
-        (section-title "YOU ARE IN A GOOD COMPANY" nil)
+        (section-title "YOU ARE IN GOOD COMPANY" nil)
         [:.flex-wrapper (anim "fadeIn" ".2s")
-         [:img {:src "/images/partners/binance.png"}]
-         [:img {:src "/images/partners/autonomous.png"}]
-         [:img {:src "/images/partners/neo.png"}]
-         [:img {:src "/images/partners/ontology.png"}]
-         [:img {:src "/images/partners/zilliqa.png"}]
-         [:img {:src "/images/partners/harmony.png"}]]]])
+         [:div [:img {:src "/images/partners/binance.png"}]]
+         [:div [:img {:src "/images/partners/autonomous.png"}]]
+         [:div [:img {:src "/images/partners/neo.png"}]]
+         [:div [:img {:src "/images/partners/ontology.png"}]]
+         [:div [:img {:src "/images/partners/zilliqa.png"}]]
+         [:div [:img {:src "/images/partners/harmony.png"}]]]]])
 
 (defc ecosystem []
       [:section.ecosystem
        [:.container
         (section-title "OUR ECOSYSTEM" nil)
         [:.flex-wrapper
-         [:.card (anim "fadeInUp" ".2s")
-          [:h3 "Community Forum"]
-          [:a {:href "https://incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/forum.png"}]]]
-         [:.card (anim "fadeInUp" ".4s")
-          [:h3 "pDEX Statistics"]
-          [:a {:href "https://pdex.incognito.best" :target "_blank"} [:img {:src "/images/ecosystem/pdex.png"}]]]
-         [:.card (anim "fadeInUp" ".6s")
-          [:h3 "Incognito Explorer"]
-          [:a {:href "https://mainnet.incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/explorer.png"}]]]]]])
+         [:div
+          [:.card (anim "fadeInUp" ".2s")
+           [:h4 "Community Forum"]
+           [:a {:href "https://incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/forum.png"}]]]]
+         [:div
+          [:.card (anim "fadeInUp" ".4s")
+           [:h4 "Incscan"]
+           [:a {:href "https://incscan.io" :target "_blank"} [:img {:src "/images/ecosystem/pdex.png"}]]]]
+         [:div
+          [:.card (anim "fadeInUp" ".6s")
+           [:h4 "Incognito Explorer"]
+           [:a {:href "https://mainnet.incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/explorer.png"}]]]]
+         [:div
+          [:.card (anim "fadeInUp" ".8s")
+           [:h4 "Incognito Tool"]
+           [:a {:href "https://incognito.mesquka.com/" :target "_blank"} [:img {:src "/images/ecosystem/tool.png"}]]]]]]])
 
 (defc spotlight []
       [:section.spotlight

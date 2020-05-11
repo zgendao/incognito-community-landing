@@ -175,12 +175,8 @@ section {
   background: var(--bg-light);
 }
 
-.data .flex-wrapper {
-  justify-content: space-around;
-}
-
 .data .block {
-  padding: 10px 20px;
+  width: 25%;
 }
 
 .data .value {
@@ -205,6 +201,13 @@ section {
   text-align: center;
 }
 
+.why .block:first-child {
+  padding-left: 0;
+}
+.why .block:last-child {
+  padding-right: 0;
+}
+
 .why p {
   font-size: 24px;
   color: var(--text-dark);
@@ -225,11 +228,12 @@ section {
 
 .phone .container > .flex-wrapper > div {
   width: 33.3%;
-  padding: 0 20px;
+  padding: 0 15px;
   z-index: 1;
 }
 
 .iphone {
+  position: relative;
   text-align: center;
 }
 
@@ -240,6 +244,7 @@ section {
 }
 .notchMockup {
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   width: 140px;
@@ -248,6 +253,7 @@ section {
 }
 .phoneScreen {
   position:absolute;
+  top: 0;
   left:0;
   right:0;
   border-radius: 25px;
@@ -325,7 +331,7 @@ section {
 
 }
 .node iframe {
-  width: 400px;
+  width: 80%;
   height: 280px;
 }
 
@@ -362,6 +368,10 @@ section {
 
 .questions .img-wrapper {
   width: 50%;
+  padding-right: 60px;
+}
+.questions .img-wrapper img {
+  width: 100%;
 }
 .questions-wrapper {
   width: 50%;
@@ -380,8 +390,14 @@ section {
   color: var(--text-grey);
 }
 
+.partners .flex-wrapper > div {
+  width: 33.3%;
+  text-align: center;
+  padding: 20px;
+}
 .partners img {
-  margin: 0 60px 50px 60px;
+  width: 70%;
+  height: auto;
 }
 
 
@@ -389,25 +405,37 @@ section {
   background: var(--bg-light);
 }
 
+.ecosystem .flex-wrapper > div {
+  padding: 20px 30px;
+  width: 25%;
+}
+
 .ecosystem .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background: var(--gradient);
-  margin: 20px 30px;
-  width: 320px;
-  height: 280px;
   box-shadow: var(--shadow);
   transition: all 0.5s cubic-bezier(.25,.8,.25,1)
 }
-
 .ecosystem .card:hover {
   box-shadow: var(--shadow-hover);
   transition: .3s;
-
 }
 
-.ecosystem h3 {
+.ecosystem h4 {
+  width: 100%;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+  margin: 15px 0;
+}
+
+.card a {
+  line-height: 0;
+}
+.card img {
+  width: 100%;
 }
 
 
