@@ -18,24 +18,17 @@
     .container {
         max-width: 960px;
     }
-    .hero .title-bg img {
-        width: 80%;
-    }
     .hero p {
         font-size: 30px;
-    }
-    .hero h1 {
-        font-size: 34px;
-        margin: 10px 0;
     }
 
   }
   @media (max-width: 1100px) {
+    .btn--emphasized {
+        padding: 10px 30px;
+    }
     .why .block .img-container img {
         width: 140px;
-    }
-    .questions h3 {
-        font-size: 26px;
     }
   }
   @media (max-width: 992px) {
@@ -44,17 +37,32 @@
     }
 
     .hero .flex-wrapper {
+        height: unset;
         max-height: unset;
+        min-height: 100vh;
     }
     .hero .title-bg {
         width: 100%;
+        padding: 30px;
     }
     .hero .hero-img {
         width: 100%;
     }
+    .hero .title-bg img {
+        width: 60%;
+    }
+    .hero .title-bg p {
+        font-size: 20px;
+    }
 
+    .data {
+        padding: 40px 0;
+    }
     .data .value {
         font-size: 38px;
+    }
+    .data .name {
+        font-size: 18px;
     }
 
     .why .block {
@@ -74,6 +82,14 @@
     .phone .container > .flex-wrapper > div {
         width: 100%;
         padding: 20px 5px;
+    }
+    
+    .iphone::before{
+        top: 20px;
+        height: 410px;
+        width: 200px;
+        margin: 1px auto;
+        border-radius: 30px;
     }
     .iphoneMockup {
         height: 413px;
@@ -129,6 +145,9 @@
         order: 2;
         width: 100%;
     }
+    .node .btn {
+        margin-left: auto;
+    }
 
     .ecosystem .flex-wrapper > div {
         padding: 40px;
@@ -140,9 +159,6 @@
         max-width: 540px;
     }
 
-    .section-title {
-      margin-bottom: 50px;
-    }
     .about-text {
         width: 100%;
         padding: 0;
@@ -161,15 +177,9 @@
         width: 50%;
         padding: 20px 0;
     }
-    .data .name {
-        font-size: 18px;
-    }
 
     .why .block {
         padding: 20px !important;
-    }
-    .why .block p {
-        font-size: 20px;
     }
     .why .block .img-container {
         width: 100%;
@@ -181,6 +191,16 @@
         width: 100%;
         padding: 0;
     }
+    .why p {
+        font-size: 16px;
+    }
+    .why p em {
+        font-size: 18px;
+    }
+    
+    .background-circles::before {
+        background-size: 1000px !important;
+    }
 
     .questions .img-wrapper img {
         width: 100%;
@@ -189,6 +209,10 @@
     .partners .flex-wrapper > div {
         width: 50%;
     }
+
+    .ecosystem .flex-wrapper > div {
+        padding: 20px;
+    }
   }
 
   @media (max-width: 575px) {
@@ -196,18 +220,30 @@
         max-width: unset;
     }
     .section-title h2 {
-        font-size: 26px;
+        font-size: 22px;
+    }
+    .section-title hr {
+        width: 120px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4, p {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 18px;
+        margin-top: 10px;
     }
 
-    .hero .title-bg {
-        padding: 0 30px;
+    .data .block {
+        padding: 15px 0;
     }
-    .hero img {
-        width: 80%;
-    }
-
     .data .value {
         font-size: 36px;
+    }
+    .data .name {
+        font-size: 16px;
     }
 
     .about-text {
@@ -223,16 +259,20 @@
         height: 130px;
     }
 
+    .function {
+        padding: 15px;
+    }
+    .function h4 {
+        font-size: unset;
+    }
+    .function p {
+        font-size: 14px;
+    }
+
     .node-text h3 {
         margin-top: 40px;
     }
-    .node-text p {
-        font-size: 18px;
-    }
 
-    .questions h3 {
-        font-size: 24px;
-    }
     .questions .img-wrapper {
         padding: 50px 10px;
         padding-bottom: 0;
@@ -245,9 +285,11 @@
         width: 100%;
     }
 
+    .ecosystem h4 {
+        font-size: unset;
+    }
     .ecosystem .flex-wrapper > div {
         width: 100%;
-        padding: 20px;
     }
 
     .spotlight-text {

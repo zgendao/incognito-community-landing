@@ -19,7 +19,7 @@
           [:p "is a privacy movement."]
           [:h1 "Send any cryptocurrencies" [:br] "completely anonymously."]
           [:.btn-wrapper (anim "fadeInUp" ".3s")
-           [:.join-btn [:a {:href "https://incognito.org/" :target "_blank"} "Join us"]]]]]
+           [:.btn.btn--emphasized [:a {:href "https://incognito.org/" :target "_blank"} "Join the community"]]]]]
         [:.hero-img (anim "fadeIn" ".1s")
          [:img {:src "/images/arts/hero.svg"}]]]])
 
@@ -55,17 +55,17 @@
           [:.img-container
            [:img {:src "/images/arts/fast.svg"}]]
           [:.text-container
-           [:p "10x faster " [:span "(100-800 TPS) "] "than any other privacy solutions " [:span "(usually less than 10 transaction/sec)"]]]]
+           [:p [:em "10x faster "] "(100-800 TPS)" [:em " than any other privacy solutions "] "(usually less than 10 transaction/sec)"]]]
          [:.block.flex-wrapper (anim "fadeInUp" ".4s")
           [:.img-container
            [:img {:src "/images/arts/cheap.svg"}]]
           [:.text-container
-           [:p "One PRV " [:span "($0.7) could "] "cover " [:span "your transaction & trading fees "] "in the next decade"]]]
+           [:p [:em "One PRV "] "($0.7) could" [:em " cover "] "your transaction & trading fees" [:em " in the next decade"]]]]
          [:.block.flex-wrapper (anim "fadeInUp" ".6s")
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
-           [:p "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source"] [:span " and contributed by members of a "] " global community"]]]]]])
+           [:p [:em "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source "] ] "and contributed by members of a" [:em " global community"]]]]]]])
 
 (defn loadvid []
   (.load (.getElementById js/document "phoneVideo")))
@@ -93,7 +93,10 @@
           [:img.iphoneMockup {:src "/images/phone/phone.svg"}]
           [:img.notchMockup {:src "/images/phone/notch.png"}]
           [:video.phoneScreen#phoneVideo {:height "545" :width "252" :mute "mute" :autoPlay "autoPlay" :loop "loop"}
-           [:source {:src (str "/images/phone/screenVideos/" (str (react app-state))  ".mp4") :type "video/mp4"}]]]
+           [:source {:src (str "/images/phone/screenVideos/" (str (react app-state))  ".mp4") :type "video/mp4"}]]
+          [:.phone__loader
+           [:svg {:viewBox "0 0 100 100" :xmlns "http://www.w3.org/2000/svg"} 
+            [:circle {:cx "50" :cy "50" :r "45"}]]]]
 
          [:.right-functions.flex-wrapper (anim "fadeInRight")
           (function "trade" "Trade" "Access to 70+ cryptos in decentralized exchange." "right")
@@ -112,7 +115,7 @@
            [:p  "Incognito nodes have a low power usage and they are ECO friendly."]
            [:p  "Rewards from operating a node is random, but you could expect a decent 45%-100% yearly earning in the beginning."]]
           [:.btn-wrapper (anim "fadeInUp" ".3s")
-           [:.node-btn [:a {:href "https://incognito.org/t/node/338" :target "_blank"} "Learn More"]]]]
+           [:.btn [:a {:href "https://incognito.org/t/node/338" :target "_blank"} "Learn More"]]]]
          [:.video-wrapper (anim "fadeIn" ".1s")
           [:iframe {:src "https://www.youtube.com/embed/bafTu0kGfq4" :frameBorder "0" :allowFullScreen "allowFullScreen"}]]]]])
 
@@ -174,7 +177,7 @@
         (section-title "PROJECT SPOTLIGHT" "inverse")
         [:.flex-wrapper (anim "fadeInUp" ".2s")
          [:a {:href "https://zgen.hu" :target "_blank"} [:img {:src "/images/white-zgen-logo.svg"}]]
-         [:.spotlight-text "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience. "]]
+         [:.spotlight-text [:p "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience."] ]]
         [:.zgen-desc "ZGEN is a bureaucracy-free online guild of makers & entrepreneurs. Our community is driven by goals & needs of the generation Z."]]])
 
 (defcs app []
