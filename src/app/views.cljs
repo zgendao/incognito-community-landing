@@ -1,5 +1,7 @@
 (ns app.views
-  (:require [rum.core :as rum :refer [defcs defc reactive react cursor]]))
+  (:require [rum.core :as rum :refer [defcs defc reactive react cursor]]
+            [app.heroArt :refer [heroArt]]
+            [app.heroArt_ :refer [heroArt_]]))
 
 (defn anim [type & delay]
   {:class ["wow" (str type)] :data-wow-delay (str (first delay))})
@@ -9,7 +11,7 @@
        [:div (anim "fadeInUp")
         [:h2 {:class inverse} text]
         [:hr {:class [inverse]}]]])
-
+        
 (defc hero []
       [:section.hero
        [:.flex-wrapper
@@ -21,7 +23,8 @@
           [:.btn-wrapper (anim "fadeInUp" ".3s")
            [:.btn.btn--emphasized [:a {:href "https://incognito.org/" :target "_blank"} "Join the community"]]]]]
         [:.hero-img (anim "fadeIn" ".1s")
-         [:img {:src "/images/arts/hero.svg"}]]]])
+         ;[:img {:src "/images/arts/hero.svg"}]
+         (heroArt_)]]])
 
 (defc about []
       [:section.about
@@ -177,7 +180,7 @@
         (section-title "PROJECT SPOTLIGHT" "inverse")
         [:.flex-wrapper (anim "fadeInUp" ".2s")
          [:a {:href "https://zgen.hu" :target "_blank"} [:img {:src "/images/white-zgen-logo.svg"}]]
-         [:.spotlight-text [:p "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience."] ]]
+         [:.spotlight-text [:p "This website was made by members of the ZGEN DAO. We created it, because we believe we found a hidden gem of the cryptocurrency world and we decided to introduce Incognito to a wider audience."]]]
         [:.zgen-desc "ZGEN is a bureaucracy-free online guild of makers & entrepreneurs. Our community is driven by goals & needs of the generation Z."]]])
 
 (defcs app []

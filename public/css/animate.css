@@ -60,7 +60,7 @@
 
 
 /* CSS LOADING ANIMATION */
-svg {
+.phone__loader svg {
   animation: 2s linear infinite svg-animation;
   width: 50px;
 }
@@ -74,7 +74,7 @@ svg {
   }
 }
 
-circle {
+.phone__loader svg circle {
   animation: 1.4s ease-in-out infinite both circle-animation;
   display: block;
   fill: transparent;

@@ -47,6 +47,14 @@ p {
   font-weight: 500;
 }
 
+svg.defs-only {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 .link-color {
   color: #278395;
 }
@@ -490,4 +498,15 @@ section {
   color: rgba(255,255,255,0.3);
   font-size: 14px;
   text-align: center;
+}
+
+.defs-only {
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
 }
