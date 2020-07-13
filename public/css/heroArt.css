@@ -814,7 +814,7 @@
     transform: translate(0, -20px);
   }
 }
-#Layer_1 > g:nth-child(2) > g:nth-child(18) > g:nth-child(12) {
+.arrows1 {
   animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
 }
 
@@ -823,7 +823,7 @@
     transform: translate(25px, 25px);
   }
 }
-#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(13) {
+.arrows2 {
   animation: arrows2 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
 }
 
@@ -831,9 +831,6 @@
   to {
     transform: translate(-25px, -25px);
   }
-}
-#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(12) {
-  animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
 }
 
 /*# sourceMappingURL=heroArt.css.map */
