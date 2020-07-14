@@ -6,6 +6,6 @@
   []
   (js/React.createElement 
     SvgLoader
-    #js {:path "/images/arts/hero.svg"} 
-    )
-  )
+    #js {:path "/images/arts/hero.svg"})) 
+    
+  
