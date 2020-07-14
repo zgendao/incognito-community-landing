@@ -18,6 +18,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-samy-svg": "^3.0.7",
+    "react-svgmt": "^1.1.11",
     "sass": "^1.26.9"
   }
 }
