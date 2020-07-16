@@ -44,10 +44,10 @@
       [:section.data
        [:.container
         [:.flex-wrapper
-         (sign "$1.54M" "shielded" ".1s")
-         (sign "1308" "validators" ".2s")
-         (sign "40" "dev members" ".3s")
-         (sign "1.4M" "lines of code" ".4s")]]])
+         (sign "$7.53M" "shielded" ".1s")
+         (sign "1591" "validators" ".2s")
+         (sign "41" "dev members" ".3s")
+         (sign "2.4M" "lines of code" ".4s")]]])
 
 (defc why []
       [:section.why
