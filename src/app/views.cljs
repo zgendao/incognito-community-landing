@@ -1,7 +1,6 @@
 (ns app.views
   (:require [rum.core :as rum :refer [defcs defc reactive react cursor]]
-            [app.heroArt :refer [heroArt]]
-            [app.heroArt_ :refer [heroArt_]]))
+            [app.heroArt :refer [heroArt]]))
 
 (defn anim [type & delay]
   {:class ["wow" (str type)] :data-wow-delay (str (first delay))})
@@ -11,7 +10,7 @@
        [:div (anim "fadeInUp")
         [:h2 {:class inverse} text]
         [:hr {:class [inverse]}]]])
-        
+
 (defc hero []
       [:section.hero
        [:.flex-wrapper
@@ -23,8 +22,7 @@
           [:.btn-wrapper (anim "fadeInUp" ".3s")
            [:.btn.btn--emphasized [:a {:href "https://incognito.org/" :target "_blank"} "Join the community"]]]]]
         [:.hero-img (anim "fadeIn" ".1s")
-         ;[:img {:src "/images/arts/hero.svg"}]
-         (heroArt_)]]])
+         (heroArt)]]])
 
 (defc about []
       [:section.about
@@ -44,8 +42,8 @@
       [:section.data
        [:.container
         [:.flex-wrapper
-         (sign "$7.53M" "shielded" ".1s")
-         (sign "1591" "validators" ".2s")
+         (sign "$10.62M" "shielded" ".1s")
+         (sign "1658" "validators" ".2s")
          (sign "41" "dev members" ".3s")
          (sign "2.4M" "lines of code" ".4s")]]])
 
@@ -68,7 +66,7 @@
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
           [:.text-container
-           [:p [:em "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source "] ] "and contributed by members of a" [:em " global community"]]]]]]])
+           [:p [:em "Incognito's blockchain is completely " [:a.link-color {:href "https://github.com/incognitochain/incognito-chain"} "open-source "]] "and contributed by members of a" [:em " global community"]]]]]]])
 
 (defn loadvid []
   (.load (.getElementById js/document "phoneVideo")))
@@ -98,7 +96,7 @@
           [:video.phoneScreen#phoneVideo {:height "545" :width "252" :mute "mute" :autoPlay "autoPlay" :loop "loop"}
            [:source {:src (str "/images/phone/screenVideos/" (str (react app-state))  ".mp4") :type "video/mp4"}]]
           [:.phone__loader
-           [:svg {:viewBox "0 0 100 100" :xmlns "http://www.w3.org/2000/svg"} 
+           [:svg {:viewBox "0 0 100 100" :xmlns "http://www.w3.org/2000/svg"}
             [:circle {:cx "50" :cy "50" :r "45"}]]]]
 
          [:.right-functions.flex-wrapper (anim "fadeInRight")
@@ -171,8 +169,8 @@
            [:a {:href "https://mainnet.incognito.org" :target "_blank"} [:img {:src "/images/ecosystem/explorer.png"}]]]]
          [:div
           [:.card (anim "fadeInUp" ".8s")
-           [:h4 "Incognito Tool"]
-           [:a {:href "https://incognito.mesquka.com/" :target "_blank"} [:img {:src "/images/ecosystem/tool.png"}]]]]]]])
+           [:h4 "Stake Calculator"]
+           [:a {:href "https://incognito.validator.services/" :target "_blank"} [:img {:src "/images/ecosystem/calculator.png"}]]]]]]])
 
 (defc spotlight []
       [:section.spotlight
