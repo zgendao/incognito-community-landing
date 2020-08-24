@@ -8,5 +8,6 @@
 
 (defn ^:export main []
   (do
+    (views/price-request)
     (start)
     (peekaboo/gift "c72e5bee-8ec7-4fc3-904b-0bb87060f9cd")))

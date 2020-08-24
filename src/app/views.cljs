@@ -1,6 +1,16 @@
 (ns app.views
+  (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [rum.core :as rum :refer [defcs defc reactive react cursor]]
-            [app.heroArt :refer [heroArt]]))
+            [app.heroArt :refer [heroArt]]
+            [cljs.core.async :refer [<!]]
+            [cljs-http.client :as http]))
+
+(def prv-price (atom 0))
+(defn price-request []
+  (go (let [response (<! (http/get "https://api.incognito.org/ptoken/list" {:with-credentials? false :headers {"Content-Type" "application/json"}}))
+            exchange (first (:Result (:body response)))
+            price (/ (:PriceUsd exchange) (:PricePrv exchange))]
+        (reset! prv-price price))))
 
 (defn anim [type & delay]
   {:class ["wow" (str type)] :data-wow-delay (str (first delay))})
@@ -42,12 +52,12 @@
       [:section.data
        [:.container
         [:.flex-wrapper
-         (sign "$10.62M" "shielded" ".1s")
-         (sign "1658" "validators" ".2s")
+         (sign "$15.82M" "shielded" ".1s")
+         (sign "2010" "validators" ".2s")
          (sign "41" "dev members" ".3s")
          (sign "2.4M" "lines of code" ".4s")]]])
 
-(defc why []
+(defc why < reactive []
       [:section.why
        [:.container
         (section-title "WHY CHOOSE INCOGNITO?" nil)
@@ -61,7 +71,7 @@
           [:.img-container
            [:img {:src "/images/arts/cheap.svg"}]]
           [:.text-container
-           [:p [:em "One PRV "] "($0.7) could" [:em " cover "] "your transaction & trading fees" [:em " in the next decade"]]]]
+           [:p [:em "One PRV "] (str "($" (subs (str (react prv-price)) 0 4) ") could") [:em " cover "] "your transaction & trading fees" [:em " in the next decade"]]]]
          [:.block.flex-wrapper (anim "fadeInUp" ".6s")
           [:.img-container
            [:img {:src "/images/arts/open.svg"}]]
@@ -73,7 +83,7 @@
 
 (def app-state (atom "shield"))
 (defc function < reactive [name title desc side]
-      [:.function {:on-click #(do  (reset! app-state name) (loadvid)) :class (when (= name (str (react app-state))) "active")}
+      [:.function {:on-click #(do (reset! app-state name) (loadvid)) :class (when (= name (str (react app-state))) "active")}
        (when (= "right" side) [:img {:src (str "/images/phone/" name "-icon.svg")}])
        [:div
         [:h4 title]
